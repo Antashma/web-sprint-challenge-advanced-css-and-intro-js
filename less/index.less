@@ -1,6 +1,11 @@
 /*Less Stuff*/
 @mobile: ~'(max-width: 500px)';
 
+.flexItFLOW(@dir, @wrap) {
+    display:flex;
+    flex-flow:@dir @wrap;
+}
+
 /*CSS RESET*/
 html, body, div, span, applet, object, iframe,  
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
@@ -76,6 +81,9 @@ nav{
     display:flex;
     justify-content:space-evenly;
     margin-top:5%;
+    @media @mobile {
+        width: 60%;
+    }
 }
 nav a{
     color:#626262;
@@ -131,12 +139,20 @@ button:hover{
     justify-content: space-around;
     width:80%;
     margin:0 auto;
+    @media @mobile {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .artist{
     width:40%;
     text-align:center;
+    @media @mobile {
+        width: 100%;
+    }
 }
 .artist img{
     width:100%;
+
 }
