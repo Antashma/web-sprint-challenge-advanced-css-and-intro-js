@@ -207,10 +207,19 @@ const artists = [
 
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
+console.log('TASK 1');
+console.log('(1) Name of the first artist:');
+console.log(artists[0].name);
 
+console.log('(2) Bio of the third artist:');
+console.log(artists[2].bio);
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+console.log('TASK 2:');
+console.log(artists[8].name + ' 😱');
+artists[8].name = 'Vincent Van Gogh';
+console.log(artists[8].name + ' :)');
 
 
 
@@ -223,9 +232,14 @@ const artists = [
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id, name) {
-    /* code here */
+    for (i=0; i<name.length; i++) {
+      if (name[i].id === id) {
+        return `The artist at index ${id} is ${name[i].name}`;
+      }
+    }
   }
-  
+console.log('TASK 3:');
+console.log(getArtistByIndex(2, artists));
   /**
 
 
